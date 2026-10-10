@@ -60,22 +60,9 @@ config.yaml
 *.pem
 *.bin
 *.sock
-*.key
-*.pub
 
 *perf.*
 *Zone.Identifier
-
-##
-## secrets
-##
-secrets/
-
-##
-## tmp and test
-##
-.tmp/
-.tmp-*/
 
 ##
 ## file: include
