@@ -12,12 +12,12 @@ type UsersRow struct {
 	IDRef          string     `gorm:"column:id_ref"`
 	Email          string     `gorm:"column:email"`
 	PhoneNumber    string     `gorm:"column:phone_number"`
-	Username       string     `gorm:"column:email"`
+	Username       string     `gorm:"column:username"`
 	Password       string     `gorm:"column:password"`
 	Banned         bool       `gorm:"column:banned"`
 	BannedReason   *string    `gorm:"column:banned_reason"`
 	PubPath        string     `gorm:"column:pub_path"`
-	PubPict        string     `gorm:"column:pub_pict"`
+	PubPict        *string    `gorm:"column:pub_pict"`
 	DateRegistered time.Time  `gorm:"column:date_registered"`
 	LastUpdate     *time.Time `gorm:"column:last_update"`
 }
