@@ -18,10 +18,10 @@ func PasswordHashArgon2(password string) (string, error) {
 	}
 
 	// Argon2id parameters (see recommendations below)
-	time := uint32(1)      // iterations
+	time := uint32(1)           // iterations
 	memory := uint32(64 * 1024) // 64 MiB
-	threads := uint8(4)    // parallelism
-	keyLen := uint32(32)   // 32-byte key
+	threads := uint8(4)         // parallelism
+	keyLen := uint32(32)        // 32-byte key
 
 	// Derive the hash
 	hash := argon2.IDKey([]byte(password), salt, time, memory, threads, keyLen)
